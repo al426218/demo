@@ -1,66 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Envio de paquetes</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-
-    <img src="Img\img.png" alt="Glovuji" >
-    <h1>Envia un paquete</h1>
-
-    <form>
+    <head>
+        <meta charset="UTF-8">
+        <title>Envio de paquetes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
     <div>
+        <img src="Img\img.png" alt="Glovuji" >
+        <h1>Envia un paquete</h1>
+        <form>
+                <table>
+                    <tr>
+                        <td class="titulo">Cuenta:</td>
+                        <td>
+                            <label><input required type="radio" name="cuenta" value="estandar">  Estándar</label>
+                            <label><input type="radio" name="cuenta" value="premium">  Premium</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Código de cliente:</td>
+                        <td><input required type="text" name="codcli"></td>
 
-            <table >
-                <tr>
-                    <td class="titulo">Cuenta:</td>
-                    <td>
-                        <label><input required type="radio" name="cuenta" value="estandar">  Estándar</label>
-                        <label><input type="radio" name="cuenta" value="premium">  Premium</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="titulo">Código de cliente:</td>
-                    <td><input required type="text" name="codcli"></td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">CP Origen:</td>
+                        <td><input required type="text" name="cporigen" maxlength="5"></td>
+                        <td class="titulo">CP Destino:</td>
+                        <td><input required type="text" name="cpdestino" maxlength="5"></td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Fecha de envío:</td>
+                        <td><input required type="date" name="fenvio"></td>
 
-                </tr>
-                <tr>
-                    <td class="titulo">CP Origen:</td>
-                    <td><input required type="text" name="cporigen" maxlength="5"></td>
-                    <td class="titulo">CP Destino:</td>
-                    <td><input required type="text" name="cpdestino" maxlength="5"></td>
-                </tr>
-                <tr>
-                    <td class="titulo">Fecha de envío:</td>
-                    <td><input required type="date" name="fenvio"></td>
-
-                </tr>
-                <tr>
-                    <td class="titulo">Tipo:</td>
-                    <td>
-                        <select required name="Tipo">
-                            <option value="fragil">Frágil</option>
-                            <option value="expres">Exprés</option>
-                            <option value="grande">Grande</option>
-                            <option value="pequeno">Pequeño</option>
-                        </select>
-                    </td>
-                    <td class="titulo">Peso (en gramos):</td>
-                    <td><input required type="number" min="0" name="peso"></td>
-                </tr>
-            </table>
-
-            <input type="submit" value="Envía">
-
-    </div>
-    </form>
-
-
-</div>
-</body>
-</html>
-</body>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Tipo:</td>
+                        <td>
+                            <select required name="Tipo">
+                                <option value="normal">Normal</option>
+                                <option value="expres">Exprés</option>
+                                <option value="fragil">Frágil</option>
+                            </select>
+                        </td>
+                        <td class="titulo">Peso (en gramos):</td>
+                        <td><input required type="number" min="0" name="peso"></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Envía">
+        </form>
+        </div>
+    </body>
 </html>
